@@ -1,5 +1,5 @@
 import './App.css';
-import { MyContainer } from './Components/MyContainer.js';
+import { MyContainer } from './Components/MyContainer';
 function App() {
   return (
     <div className="App">
