@@ -1,7 +1,7 @@
 //import React from "react";
 
 
-export default function MyList(props) {
+export function MyList(props) {
     const items = props.items; 
     console.log(items)
     const listItems = items.map((item) => 
