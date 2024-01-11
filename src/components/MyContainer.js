@@ -6,7 +6,7 @@ const MyContainer = () => {
     const [items, setItems] = useState([{id:"1", text:"This is an item", clicked:false}, {id: "2", text:"Also this", clicked:false}])
     const [text, setText] = useState(null);
     const updateItem = (id) => {
-        
+        items[Number(id)-1].clicked = true;
     }
     function handleClick(text) {
         items.push({id: JSON.stringify(items.length+1), text: text, clicked: false})
