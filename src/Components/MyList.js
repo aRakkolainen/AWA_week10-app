@@ -2,9 +2,8 @@
 
 
 function MyList(props) {
-    //console.log(props.header)
-    //console.log(props.items);
     const items = props.items; 
+    console.log(items)
     const listItems = items.map((item) => 
     <li>{item.text}</li>)
     return (
