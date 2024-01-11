@@ -2,7 +2,7 @@
 import { MyList } from "./MyList";
 import { useState } from "react";
 
-export default function MyContainer() {
+const MyContainer = () => {
     const [items, setItems] = useState([{id:"1", text:"This is an item"}, {id: "2", text:"Also this"}])
     function handleClick(length) {
         const id=length+1;
@@ -21,3 +21,5 @@ export default function MyContainer() {
 
     )
 }
+
+export default MyContainer

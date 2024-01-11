@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function MyList(props) {
+const MyList = (props) => {
     const items = props.items; 
     console.log(items)
     const listItems = items.map((item) => 
@@ -13,3 +13,5 @@ export function MyList(props) {
         </>
     )
 }
+
+export default MyList
