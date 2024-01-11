@@ -1,7 +1,6 @@
 //import React from "react";
-import MyList from "./MyList";
 import { useState } from "react";
-
+import MyList from "./MyList";
 export default function MyContainer() {
     const [items, setItems] = useState([{id:"1", text:"This is an item"}, {id: "2", text:"Also this"}])
     function handleClick(length) {
