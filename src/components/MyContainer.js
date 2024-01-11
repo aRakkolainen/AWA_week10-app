@@ -3,20 +3,24 @@ import MyList from "./MyList";
 import { useState } from "react";
 
 const MyContainer = () => {
-    const [items, setItems] = useState([{id:"1", text:"This is an item"}, {id: "2", text:"Also this"}])
-    function handleClick(length) {
-        const id=length+1;
-        const newItem = {
-            id: JSON.stringify(id),
-            text: "New item" + JSON.stringify(id)
-        }
-        items.push(newItem);
+    const [items, setItems] = useState([{id:"1", text:"This is an item", clicked:false}, {id: "2", text:"Also this", clicked:false}])
+    const [text, setText] = useState(null);
+    const updateItem = (id) => {
+        
+    }
+    function handleClick(text) {
+        items.push({id: JSON.stringify(items.length+1), text: text, clicked: false})
+        setItems(items);
     }
     return(
         <>
-            <MyList header="Really epic list component" items={items}></MyList>
-            <textarea></textarea>
-            <button onClick={() => handleClick(items.length)}>Add new item</button>
+            <MyList 
+                updateItem={updateItem}
+                header="Really epic list component" 
+                items={items}>
+                </MyList>
+            <textarea onChange={(e) => setText(e.target.value)}></textarea>
+            <button onClick={() => handleClick(text)}>Add new item</button>
         </>
 
     )
