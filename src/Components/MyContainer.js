@@ -1,5 +1,5 @@
 //import React from "react";
-import MyList from "./MyList";
+import MyList from "./MyList.js";
 
 function MyContainer() {
     return(
