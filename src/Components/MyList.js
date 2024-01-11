@@ -1,5 +1,8 @@
 //import React from "react";
 
-export function MyList(header, items) {
+
+function MyList(header, items) {
     console.log(items.items);
 }
+
+export default MyList;
